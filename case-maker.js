@@ -9,7 +9,7 @@ const camelCase = function(input) {
       console.log("HI");
       result = result + input.toUpperCase[i];
     }*/
-    if (input[i] != ' ') {
+    if (input[i] !== ' ') {
       if (input[i - 1] === ' ') {
         result = result + input[i].toUpperCase();
       } else {

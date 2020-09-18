@@ -2,7 +2,7 @@ const multiplicationTable = function(maxValue) {
   // Your code here
   let table = '';
   for (let i = 0; i < maxValue; i++) {
-    let row = [];
+    
     for (let j = 0; j < maxValue; j++) {
       table = table + (i + 1) * (j + 1) + ' ';
     }

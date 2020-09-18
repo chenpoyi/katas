@@ -6,7 +6,7 @@ const makeCase = function(input, cases) {
   if (typeof cases === 'string') {
     caseArray.push(cases);
   } else if (typeof cases === 'object') {
-    for (type of cases) {
+    for (let type of cases) {
       caseArray.push(type);
     }
   }
@@ -51,7 +51,7 @@ const makeCamel = function(input) {
   let result = '';
   for (let i = 0; i < input.length; i++) {
 
-    if (input[i] != ' ') {
+    if (input[i] !== ' ') {
       if (input[i - 1] === ' ') {
         result = result + input[i].toUpperCase();
       } else {
@@ -67,7 +67,7 @@ const makePascal = function(input) {
   result = input[0].toUpperCase();
   for (let i = 1; i < input.length; i++) {
 
-    if (input[i] != ' ') {
+    if (input[i] !== ' ') {
       if (input[i - 1] === ' ') {
         result = result + input[i].toUpperCase();
       } else {
@@ -132,7 +132,7 @@ const makeVowel = function(input) {
 const makeConsonant = function(input) {
   let result = '';
   for (let i = 0; i < input.length; i++) {
-    if (input[i] != 'a' && input[i] != 'e' && input[i] != 'i' && input[i] != 'o' && input[i] != 'u') {
+    if (input[i] !== 'a' && input[i] !== 'e' && input[i] !== 'i' && input[i] !== 'o' && input[i] !== 'u') {
       result = result + input[i].toUpperCase();
     } else {
       result = result + input[i];

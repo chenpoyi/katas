@@ -5,15 +5,15 @@ const squareCode = function(message) {
   message = removeSpaces(message);
   let width = Math.ceil(Math.sqrt(message.length));
   textArray = buildArray(message, width);
-  result = buildString(textArray, message.length);
+  result = buildString(textArray);
 
   return result;
 };
 
-const buildString = function(array, length) {
+const buildString = function(array) {
   let result = '';
   
-  let i = 0;
+  
   for (let i = 0; i < array.length * array[0].length; i++) {
     if (array[i % array.length][Math.floor((i) / array.length)]) {
       if ((i % array.length) === 0) {
@@ -36,7 +36,7 @@ const buildArray = function(message) {
 
   for (let i = 0; i < message.length; i++) {
     
-    if ((i + 1) % width != 0) {
+    if ((i + 1) % width !== 0) {
       row = row + message[i];
     } else {
 
@@ -57,7 +57,7 @@ const buildArray = function(message) {
 const removeSpaces = function(message) {
   let result = '';
   for (let i = 0; i < message.length; i++) {
-    if (message[i] != ' ') {
+    if (message[i] !== ' ') {
       result = result + message[i];
     }
     

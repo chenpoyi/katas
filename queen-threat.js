@@ -1,4 +1,4 @@
-const generateBoard = function(white, black) {
+const generateBoard = function(whiteQueen, blackQueen) {
   let board = [];
   for (let i = 0; i < 8; i++) {
     let row = [];
